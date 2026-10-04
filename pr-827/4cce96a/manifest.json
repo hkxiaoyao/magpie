@@ -1,0 +1,58 @@
+{
+  "summary": "这次改动只影响 Aside 在 Agent 页里的呈现与流程：接入开关只登记 magpie 提供方、不再动模型选择；模型字段与接入状态分列显示，并按字段给出提示；断开时先由进程内计划渲染还原预览，运行状态读不到时还多出「保存供下次启动使用」的选择。",
+  "scenes": [
+    {
+      "title": "Aside 行与接入详情",
+      "shots": [
+        {
+          "file": "01-agents-list-expanded.png",
+          "caption": "展开「未设置」后的 Agent 列表",
+          "width": 2560
+        },
+        {
+          "file": "02-agents-install-list.png",
+          "caption": "可安装的 Agent 列表",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "接入开关：只登记提供方",
+      "shots": [
+        {
+          "file": "03-agents-list-all.png",
+          "caption": "Agent 页上的完整列表与每行的接入开关",
+          "width": 2560
+        },
+        {
+          "file": "04-agents-install-section.png",
+          "caption": "列表下方的安装区，列出可安装的 Agent 命令行工具",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "断开前的还原预览",
+      "shots": [
+        {
+          "file": "05-agents-after-refresh.png",
+          "caption": "刷新后 Agent 页的列表（Aside 未安装时不会出现它的行）",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "Aside 行与接入详情 · shot div.row.agent[data-id=\"aside\"]: nothing visible matches div.row.agent[data-id=\"aside\"] (0 in the page)",
+    "接入开关：只登记提供方 · click div.row.agent[data-id=\"aside\"] button.ag-conn: nothing visible matches div.row.agent[data-id=\"aside\"] button.ag-conn (0 in the page)",
+    "断开前的还原预览 · click div.row.agent[data-id=\"aside\"] button.ag-conn: nothing visible matches div.row.agent[data-id=\"aside\"] button.ag-conn (0 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里 Aside 是全新安装、没有可用的运行状态，也没有图片生成等自身选择：字段级提示（缺少已确认的恢复记录、图片生成未验证、已保存待下次启动）、提供方指向别处时的「重新接入」按钮，以及运行状态不可读时选中模型后弹出的「保存供下次启动使用」对话框，都需要真实的 Aside 运行状态或已有的模型/图片选择才会出现；这里只能看到 Aside 的行本身和它的接入详情。",
+  "interactive": true,
+  "pages": 1
+}

@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#827 界面预览 · 4cce96a</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#827 界面预览</h1><p class="m">commit 4cce96a · <a href="https://github.com/yetone/magpie/pull/827">回到 PR</a> · 这次改动只影响 Aside 在 Agent 页里的呈现与流程：接入开关只登记 magpie 提供方、不再动模型选择；模型字段与接入状态分列显示，并按字段给出提示；断开时先由进程内计划渲染还原预览，运行状态读不到时还多出「保存供下次启动使用」的选择。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-agents-list-expanded.png" alt="展开「未设置」后的 Agent 列表"><figcaption>Aside 行与接入详情 · 展开「未设置」后的 Agent 列表</figcaption></figure>
+<figure><img src="02-agents-install-list.png" alt="可安装的 Agent 列表"><figcaption>Aside 行与接入详情 · 可安装的 Agent 列表</figcaption></figure>
+<figure><img src="03-agents-list-all.png" alt="Agent 页上的完整列表与每行的接入开关"><figcaption>接入开关：只登记提供方 · Agent 页上的完整列表与每行的接入开关</figcaption></figure>
+<figure><img src="04-agents-install-section.png" alt="列表下方的安装区，列出可安装的 Agent 命令行工具"><figcaption>接入开关：只登记提供方 · 列表下方的安装区，列出可安装的 Agent 命令行工具</figcaption></figure>
+<figure><img src="05-agents-after-refresh.png" alt="刷新后 Agent 页的列表（Aside 未安装时不会出现它的行）"><figcaption>断开前的还原预览 · 刷新后 Agent 页的列表（Aside 未安装时不会出现它的行）</figcaption></figure>
+</main></html>
